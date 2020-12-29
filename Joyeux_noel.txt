@@ -1,0 +1,206 @@
+
+<h1>JOYEUX  NOEL et BONNE ANNEE</h1>
+
+
+<?php
+
+
+/*
+
+
+Author: YISSIBI TERRY
+
+MAIL: YISTED94@GMAIL.COM
+
+DEVELOPPED WITH: PHP 5.6
+
+DATE: 24-12-2020 23:30 (timestamp 1608849011)
+
+
+
+
+
+
+*/
+
+#LOIN DE TOUTE PENSEE PRETENCEUSE CE SCRPT A ETE REALSEE POUR SOUHATE UN JEUX NOEL A TOUS
+
+
+#ON CREE UN FICHIER TEXT
+
+
+$doc = fopen('joyeux2.txt',"w+");
+
+// ON CREE LA BIBLE
+for ($i=0; $i < 9; $i++) 
+
+{ 
+	# LA BiBLE
+
+//L'ENTETE
+
+       if($i===0)
+	fwrite($doc , str_repeat(" ", 55)."______________\n");
+
+
+// LES BORTDURE ET LA SAINTE CROIX
+else if($i===1)
+fwrite($doc , str_repeat(" ", 55)."|".str_repeat(" ", 12)."|\\ \n");
+
+else if($i===2)
+fwrite($doc , str_repeat(" ", 52)."\  |".str_repeat(" ", 5)." |".str_repeat(" ", 5)."||  /\n");
+
+else if($i===3)
+fwrite($doc , str_repeat(" ", 55)."|".str_repeat(" ", 3)."-------".str_repeat(" ", 2)."||\n");
+
+else if($i>=3 && $i < 6)
+	if($i==4)
+fwrite($doc , str_repeat(" ", 52)."-  |".str_repeat(" ", 5)." |".str_repeat(" ", 5)."||  -\n");
+		else
+fwrite($doc , str_repeat(" ", 55)."|".str_repeat(" ", 5)." |".str_repeat(" ", 5)."||\n");
+//HOLY BIBLE
+else if($i === 7)
+fwrite($doc , str_repeat(" ", 52)."/  | HOLY BIBLE ||  \ \n");
+// LE MESSAGE
+else if($i===8)
+fwrite($doc , str_repeat(" ", 55)."|".str_repeat(" ", 12)."|/ \n".str_repeat(" ", 55)."°°°°°°°°°°°°°°\n".str_repeat(" ", 30)."QUE LE SGR JESUS CHRIST DE NAZARETH PUISSE NAITRE DANS VOS COEURS!!!\n\n");
+
+  
+
+}
+
+
+
+
+
+#LE ToiT
+
+
+
+
+for ($i=1; $i<=5; $i++) {
+for ($j=0;$j<5-$i;$j++) 
+{// les espaces...
+
+fwrite($doc,str_repeat(" ",2));
+}
+for ($j=0; $j<($i*2)-1; $j++)
+{
+  fwrite($doc,str_repeat(" ",1)."*");// on génére un espace afin d'ordonner les étoiles
+}
+
+
+fwrite($doc,str_repeat(" ",24)."".str_repeat("/\\",42)."\n");
+
+/* on meme instant  on sépare le sapin du toit et on génére un espace afin de commencer à déssiner le toit */
+
+}
+
+//ON NOMME LA TOUR
+
+fwrite($doc," 0 BINARY  TOUR  1".str_repeat(" ", 24)."".str_repeat("°",84)."\n");
+
+
+// ON STOCKE LES CARACTERE DE SOUHAIT,LES LANGAGES ET LE BINAIRE POUR LA TOUR  BINAIRE DANS UN ARRAY
+
+
+$tableau_1 = array('J','O','Y','E','U','X','N','O','E','L','*','*','*','*','*','*','*');
+
+
+
+
+$tableau_2 = array('B','O','N','N','E','A','N','N','E','E','~','~','~','~','~','~','~');
+
+
+
+$tableau_3 = array('L','E','S','','','D','E','V','S','','','','','','','');
+
+
+$tableau_4 = array('HTML','','JS','','PHP','','SQL','','','','','','','','','' );
+
+
+$BIn_Rand = array('0','1');
+
+$espace = 2;
+
+
+$cube_accept = 3;
+
+$hauteur_intervale = 0;
+
+// ON LANCE LA CONSTRUCTION  DES TOURS 
+
+
+// LA CONSTRUCTION  COMMENCE DE HAUT EN BAS
+
+
+//ON AURA TROIS TOUR  
+
+// LA PREMIERE ENT ECHEQUE CONSTITUER DE NOMBRE  0 ET 1 GENERER ALEATOIREMENT
+
+//LA SECONDE SIMPLE
+
+//LA TROISME ESCALIER DONT LES CONSTITUANT CROISSANCENT LE LONG DE LA BOUCLE
+
+// EN GROS CES CONSTRUCTIONS  SONT UN ENSEMBLES  D'ESPACES REPETES BIEN PLACER SUIVIE DE CHAINES DE CARACTÈRE ET UN PEU  DE LOGIQUE  AU NIVEAU DES BOUCLES
+
+for ($j=0; $j < 10 ; $j++) 
+
+{ 
+	# code...
+
+	// ON TROUVE LE MODULO
+
+	$hauteur_intervale %= 3 ;
+//ESPACE PERMET DE DETERMINER LES ESPACES DE L'IMMEUBLE EN FORME D'ESCALIER DU HAUT EN BAS;
+	$espace +=4 ;
+
+
+//SI C'EST PAIR ON EN DEDUIT QUE L'IMMEUBLE BINAIRE A TROIS CASE A CE NIVEAU
+if($hauteur_intervale == 0)
+{
+//ON DESSINE  TOUT LES IMMEUBLE 
+//ON SAUTE TROIS NIVEAU EN QUITTANT DU HAUT POUR COMMENCER LE TOIIT DE L'IMMEBLE SIMPLE
+
+
+if($j == 3)
+
+
+fwrite($doc,str_repeat(" ",1)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)]."",2)."".$BIn_Rand[array_rand($BIn_Rand)]."  /\\\\\\\\\\\\\\\\\\\\         ".str_repeat(" ",2)."".str_repeat("|",25)."".str_repeat("|",$espace = $espace + 4)."\n".str_repeat(" ",1)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)]."",2)."".$BIn_Rand[array_rand($BIn_Rand)]."   /\\\\\\\\\\\\\\\\\\\\        ".str_repeat(" ",2)."".str_repeat("|",25)."".str_repeat("|",$espace = $espace + 4)."\n".str_repeat(" ",1)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)]."",2)."".$BIn_Rand[array_rand($BIn_Rand)]."     \\\\\\\\\\\\\\\\\\\\ ".str_repeat(" ",5)."".$tableau_2[$j]."".$tableau_3[$j]."".str_repeat(" ",2)."".str_repeat("|",25)."".str_repeat("|",$espace = $espace + 4)."\n");
+
+//SI J EST SUPERIEUR A 3 ON SUPPOSE QUE NOUS DEVONS CONSTRUIRE LE BAS DE LA CONSTRUCTION
+elseif($j > 3)
+
+fwrite($doc,str_repeat(" ",1)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."".$BIn_Rand[array_rand($BIn_Rand)]."\n".str_repeat(" ",1)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."".$BIn_Rand[array_rand($BIn_Rand)]."".str_repeat(" ",15)."".$tableau_1[$j]."".str_repeat(" ",5)."".$tableau_2[$j]."".str_repeat(" ",2)."".str_repeat("|",25)."".str_repeat("|",$espace)."\n".str_repeat(" ",1)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."".$BIn_Rand[array_rand($BIn_Rand)]."  |".str_repeat(" ",2)." |||||||||       ".str_repeat(" ",2)."".str_repeat("|",25)."".str_repeat("|",$espace = $espace + 4)."\n");
+
+// ON SUPPOSE QUE NOUS SOMMES  AU SOMMET DES DEUX PLUS GRAND  IMMEUBLE
+else
+fwrite($doc,str_repeat(" ",1)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."".$BIn_Rand[array_rand($BIn_Rand)]."\n".str_repeat(" ",1)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."".$BIn_Rand[array_rand($BIn_Rand)]."".str_repeat(" ",21)."...LES DEVS HTML,CSS,JS,PHP,SQL\n".str_repeat(" ",1)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."  ".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."".$BIn_Rand[array_rand($BIn_Rand)]."".str_repeat(" ",15)."".$tableau_1[$j]."".str_repeat(" ",5)."".$tableau_2[$j]."".str_repeat(" ",2)."".str_repeat("|",25)."".str_repeat("|",$espace)."\n");
+
+}
+
+
+
+// DANS LE CAS CONTRAIRE LA VALEUR EST IMPAIR ET L'IMMEUBLE  EN ECHEQUE A DEUX CASE PLEINE
+else
+
+
+// $j < 3 ON NE TIENT PAS DE LA CONSTRUCTION  DE CET IMMEUBLE SIMPLE CAR IL EST PETIT PAR RAPPORT AU AUTRES
+	if($j < 3)
+
+fwrite($doc,str_repeat(" ",1)."|".str_repeat(" ",2)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."".str_repeat(" ",2)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."   |".str_repeat(" ",15)."".$tableau_1[$j]."".str_repeat(" ",5)."".$tableau_2[$j]."".str_repeat(" ",2)."".str_repeat("|",25)."".str_repeat("|",$espace)."\n");
+
+
+
+//ON PEUT DEBUTER SA CONSTRUCTION 
+else
+
+fwrite($doc,str_repeat(" ",1)."|".str_repeat(" ",2)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."".str_repeat(" ",2)."".str_repeat($BIn_Rand[array_rand($BIn_Rand)]."".$BIn_Rand[array_rand($BIn_Rand)],2)."   |".str_repeat(" ",2)."|".str_repeat(" ",3)."|||||||||".$tableau_1[$j]."".str_repeat(" ",5)."".$tableau_2[$j]."".str_repeat(" ",2)."".str_repeat("|",25)."".str_repeat("|",$espace = $espace )."\n");
+
+
+$hauteur_intervale++;
+
+
+}
+
+?>
